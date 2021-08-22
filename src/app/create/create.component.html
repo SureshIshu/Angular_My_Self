@@ -1,0 +1,32 @@
+<form (ngSubmit)="onSubmit(formValue)" #formValue="ngForm" class="customMargin">
+<div class="row">
+    <div class="form-group col-4 offset-4">
+    <label for="firstname">First Name</label>
+    <input type="text" name="firstname" id='firstname' ngModel class="form-control" required>
+</div>
+</div>
+
+<div class="row">
+    <div class="form-group col-4 offset-4">
+    <label for="lastname">Last Name</label>
+    <input type="text" name="lastname" id='lastname' ngModel class="form-control">
+</div>
+</div>
+<div class="row">
+    <div class="form-group col-4 offset-4">
+    <label for="email">Email</label>
+    <input type="text" name="email" id='email' ngModel class="form-control" required email>
+    
+</div>
+</div>
+<div class="row">
+    <div class="form-group col-4 offset-4">
+<button type="submit" class="btn btn-success" [disabled]="!formValue.valid">Submit</button>
+</div>
+</div>
+</form>
+<br/>
+<div class="row">
+    <div class="form-group col-8 offset-4">
+<a class="btn btn-outline-primary" routerLinkActive="active" routerLink="/">Redirect to Home Page of the Application</a>
+</div></div>

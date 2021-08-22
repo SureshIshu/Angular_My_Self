@@ -1,0 +1,5 @@
+.customMargin {margin-top:25px;}
+
+.form-control.ng-touched.ng-invalid {
+    border:1px solid red;
+    }

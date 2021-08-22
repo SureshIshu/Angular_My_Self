@@ -1,0 +1,34 @@
+<div class="container customMargin">
+
+    <h4>Users List</h4>
+  
+    <div class="table-responsive">
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+            <th scope="col">User Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of User">
+            <td>{{user.id}}</td>
+            <td>{{user.first_name}}</td>
+            <td>{{user.last_name}}</td>
+            <td>{{user.email}}</td>
+            <td>
+                <span class="update" routerLink="/update"> <button class="btn btn-success">Update</button> </span> /
+                <span class="detail" routerLink="/details"> <button class="btn btn-info">Details</button> </span> /
+                <span class="delete"><button class="btn btn-danger">Delete</button></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="form-group">
+  <a class="btn btn-outline-primary" routerLinkActive="active" routerLink="/">Redirect to Home Page of the Application</a>
+  </div>
+  
